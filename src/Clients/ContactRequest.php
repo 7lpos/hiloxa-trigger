@@ -12,12 +12,12 @@ class ContactRequest extends HiloxaClient
 {
     public function getAll(array $query = []): Collection
     {
-        return $this->get("/contacts/", $query);
+        return $this->get("/contacts", $query);
     }
 
     public function create(array $data): Collection
     {
-        return $this->post("/contacts/", $data);
+        return $this->post("/contacts", $data);
     }
 
 }
