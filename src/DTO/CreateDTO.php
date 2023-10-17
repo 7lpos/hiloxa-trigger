@@ -25,8 +25,8 @@ class CreateDTO extends HiloxaDTO
             "postalCode" => $this->model?->postalCode,
             "companyName" => $this->model?->companyName,
             "website" => $this->model?->website,
-            "tags" => array_merge((array)$this->model?->tags, ['from ' . config('hiloxa-trigger.from')]),
-            "source" => config('hiloxa-trigger.from') . " - from api {$this->model?->getTable()} table",
+            "tags" => array_merge((array)$this->model?->tags, [$this->model?->getTable(), 'from ' . config('hiloxa-trigger.from')]),
+            "source" => "from " . config('hiloxa-trigger.from'),
             "customField" => [
                 "__custom_field_id__" => $this->model?->customField
             ],
