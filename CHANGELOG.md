@@ -2,7 +2,7 @@
 
 All notable changes to `hiloxa-trigger` will be documented in this file
 
-# <font color="green">1.0.0 : **Released at 2023-10-11**</font>
+# <font color="green">1.0.0 : **Released at 2023-10-17**</font>
 
 ## 01.00.00.3 - 2023-10-17
 
