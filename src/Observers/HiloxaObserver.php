@@ -11,11 +11,11 @@ class HiloxaObserver
 {
     public function created(HiloxaAble $model)
     {
-        Event::dispatch(CreatedModel::class, [$this]);
+        Event::dispatch(CreatedModel::class, [$model]);
     }
 
     public function updated(HiloxaAble $model)
     {
-        Event::dispatch(UpdatedModel::class, [$this]);
+        Event::dispatch(UpdatedModel::class, [$model]);
     }
 }
