@@ -16,5 +16,6 @@ All notable changes to `hiloxa-trigger` will be documented in this file
 
 - add support for Laravel 10
 - add support for Laravel 9
+- add support for Laravel 8
 
 
