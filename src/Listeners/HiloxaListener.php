@@ -3,8 +3,9 @@
 namespace HL\HiloxaTrigger\Listeners;
 
 use HL\HiloxaTrigger\Services\HiloxaContactService;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-abstract class HiloxaListener
+abstract class HiloxaListener implements ShouldQueue
 {
     protected $event;
     protected string $triggerName;
