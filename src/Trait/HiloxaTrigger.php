@@ -6,17 +6,15 @@ use HL\HiloxaTrigger\DTO\CreateDTO;
 use HL\HiloxaTrigger\DTO\HiloxaDTO;
 use HL\HiloxaTrigger\Events\CreatedModel;
 use HL\HiloxaTrigger\Events\UpdatedModel;
+use HL\HiloxaTrigger\Observers\HiloxaObserver;
 use Illuminate\Http\Request;
 
 trait HiloxaTrigger
 {
 
-    public function initializeHiloxaTrigger(): void
+    public static function bootHiloxaTrigger()
     {
-        $this->dispatchesEvents = [
-            'created' => CreatedModel::class,
-            'updated' => UpdatedModel::class,
-        ];
+        static::observe(new HiloxaObserver());
     }
 
     public function hiloxaDTO($model): HiloxaDTO
